@@ -6,6 +6,7 @@ import {
     TableBody,
     TableRow,
     TableCell,
+    Button,
 } from '@material-ui/core'
 import data from '../data/mockData.json';
 
@@ -67,6 +68,7 @@ const DataTable = ({origin, destination, freightMode, pickupDate}) => {
                         <TableCell onClick={()=> handleClickSort("ETA")}>
                             {getSortIcon("ETA")} ETA
                         </TableCell>
+                        <TableCell />
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -79,6 +81,12 @@ const DataTable = ({origin, destination, freightMode, pickupDate}) => {
                             <TableCell>{row.price}</TableCell>
                             <TableCell>{row.duration}</TableCell>
                             <TableCell>{row.ETA}</TableCell>
+                            <TableCell>
+                                <Button
+                                    onClick={()=>alert(`Thanks for booking! ${JSON.stringify(row)}`)}>
+                                    BOOK!
+                                </Button>
+                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
