@@ -1,11 +1,16 @@
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
+    const [origin,setOrigin] = useState();
+    const [destination,setDestination] = useState();
+    const [freightMode,setFreightMode] = useState();
+    const [pickupDate,setPickupDate] = useState();
 
-    </div>
-  );
+    return (
+        <div className="App">
+        </div>
+    );
 }
 
 export default App;
