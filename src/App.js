@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Search from './components/search'
+import DataTable from './components/datatable'
 import './App.css';
 
 function App() {
@@ -21,6 +22,14 @@ function App() {
             <Search
                 handleChange={handleChange}
             />
+            { (origin || destination || freightMode || pickupDate ) &&
+                <DataTable
+                    origin={origin}
+                    destination={destination}
+                    freightMode={freightMode}
+                    pickupDate={pickupDate}
+                />
+            }
         </div>
     );
 }
