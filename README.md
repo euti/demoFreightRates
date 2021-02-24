@@ -2,6 +2,16 @@
 
 This project was created to demo a Freight Rates Frontend prototype.
 
+## Functionality
+
+The App loads a Search Bar to filter some data (mocked in ./data/mockData.json for testing proposes).
+
+Clicking on SEARCH button triggers the Data Table to show with this data filtered.
+
+Additionally it's possible to sort normally and on reverse the data by Price, Duration or ETA clicking on the row name.
+
+The BOOK buttons mock the possible future functionality connecting the component to a booking interface.
+
 # Scripts
 
 ## `yarn start`
