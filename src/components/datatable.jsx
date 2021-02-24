@@ -51,7 +51,7 @@ const DataTable = ({origin, destination, freightMode, pickupDate}) => {
 
     return (
         // TODO get the columns names into an array to simplify the code and the onClick calls
-        <TableContainer>
+        <TableContainer id="dataTable">
             <Table>
                 <TableHead>
                     <TableRow>

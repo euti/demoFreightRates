@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
     TextField,
     MenuItem,
@@ -13,7 +13,7 @@ const Search = ({handleChange}) => {
     const today = new Date();
 
     return (
-        <>
+        <div id="search">
             <TextField id="origin" label="Origin" />
             <TextField id="destination" label="Destination" />
             <TextField id="freightMode" label="Mode" defaultValue={freightModes[0]} select>
@@ -27,8 +27,8 @@ const Search = ({handleChange}) => {
                 type="date"
                 defaultValue={today.toISOString().slice(0, 10)}
             />
-            <Button onClick={handleChange}>Search</Button>
-        </>
+            <Button id="searchButton" onClick={handleChange}>Search</Button>
+        </div>
     )
 }
 
